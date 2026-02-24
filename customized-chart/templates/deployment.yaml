@@ -1,0 +1,16 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Values.appName.app }}
+spec:
+  replicas: {{ .Values.replicas }}
+  selector:
+    matchLabels:
+      app: {{ .Values.appName.app }}
+  template:
+    metadata:
+      labels:
+        app: {{ .Values.appName.app }}
+    spec:
+    # . is used to
+    {{- template "deployment-spec" . }}
