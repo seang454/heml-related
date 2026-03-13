@@ -1,0 +1,3 @@
+[submodule "helm-chart"]
+	path = helm-chart
+	url = https://github.com/seang454/helm-chart.git
